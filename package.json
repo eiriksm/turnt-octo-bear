@@ -1,0 +1,56 @@
+{
+  "name": "turnt-octo-bear",
+  "version": "0.0.0",
+  "description": "turnt-octo-bear ===============",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eiriksm/turnt-octo-bear.git"
+  },
+  "keywords": [
+    "rethinkdb"
+  ],
+  "author": "Eirik S. Morland <eirik@morland.no>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eiriksm/turnt-octo-bear/issues"
+  },
+  "homepage": "https://github.com/eiriksm/turnt-octo-bear",
+  "dependencies": {
+    "engine.io": "^1.3.1",
+    "good": "^2.1.2",
+    "hapi": "^6.0.2",
+    "node-uuid": "^1.4.1",
+    "primus": "^2.3.0",
+    "primus-emitter": "^3.0.2",
+    "rethinkdb": "^1.13.0-2"
+  },
+  "devDependencies": {
+    "browserify": "^4.2.0",
+    "browserify-shim": "^3.6.0",
+    "envify": "^1.2.1",
+    "gulp": "^3.8.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-concat": "^2.3.3",
+    "gulp-uglify": "^0.3.1",
+    "istanbul": "^0.3.0",
+    "mocha": "^1.20.1",
+    "react": "^0.10.0",
+    "reactify": "^0.13.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "reactify"
+    ]
+  },
+  "browser": {
+    "primus": "./static/primus.js"
+  },
+  "browserify-shim": {
+    "primus": "Primus"
+  }
+}
