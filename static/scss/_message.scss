@@ -1,0 +1,42 @@
+.message-form {
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  background: #efefef;
+  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  line-height: 30px;
+  z-index: 0;
+  bottom: 0;
+  input {
+    width: 100%;
+  }
+}
+
+.messages {
+  padding-bottom: 60px;
+  text-align: center;
+  padding-right: 300px;
+  .message {
+    background: #F0F7FD;
+    margin: .5em 0;
+    border-radius: 5px;
+    padding-bottom: 1em;
+    .meta {
+      padding: .5em 0;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      background: #eee;
+    }
+    svg {
+      background: #fff;
+      border: .5em solid #000;
+    }
+  }
+}
+
+@media all and (max-width:650px) {
+  .messages {
+    padding-right: 0;
+  }
+}

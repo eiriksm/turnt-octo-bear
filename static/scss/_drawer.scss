@@ -1,0 +1,156 @@
+// Borrowed from http://www.designcouch.com/home/why/2014/04/23/pure-css-drawer-menu/
+
+/* gets the actual input out of the way;
+we're going to style the label instead */
+
+.drawer-toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.drawer-toggle-label {
+  user-select: none;
+  left: 0px;
+  height:50px;
+  width: 50px;
+  display: block;
+  position: fixed;
+  background: rgba(255,255,255,.0);
+  z-index: 1;
+  &.right {
+    right: 0;
+    left: auto;
+  }
+}
+
+/* adds our "hamburger" menu icon */
+
+.drawer-toggle-label:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 24px;
+  background: #8d8d8d;
+  left: 13px;
+  top: 18px;
+  box-shadow: 0 6px 0 #8d8d8d, 0 12px 0 #8d8d8d;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  background: #efefef;
+  padding: 10px 10px 10px 50px;
+  font-size: 30px;
+  line-height: 30px;
+  z-index: 0;
+}
+
+/* actual page content pane */
+
+#page-content {
+  margin-left: 300px;
+  width: 100%;
+  height: calc(100% - 50px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  padding-top: 50px;
+}
+@media all and (min-width:651px) {
+  .drawer-toggle ~ .drawer-toggle-label {
+    width: calc(100% - 300px);
+  }
+
+  .drawer-toggle ~ .drawer-toggle-label,
+  .drawer-toggle ~ header {
+    left: 300px;
+  }
+
+  .drawer-toggle ~ .drawer {
+    left: 0px;
+  }
+
+  .drawer-toggle ~ #page-content {
+    margin-left: 300px;
+  }
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left:-300px;
+  height: 100%;
+  width: 300px;
+  background: #2f2f2f;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Menu item styles */
+
+.drawer ul {
+  list-style-type:none;
+}
+
+.drawer ul a {
+  display:block;
+  padding:10px;
+  color:#c7c7c7;
+  text-decoration:none;
+}
+
+.drawer ul a:hover {
+  color:white;
+}
+
+/* Responsive MQ */
+
+@media all and (max-width:650px) {
+  /* checked styles (menu open state) */
+
+  .drawer-toggle:checked ~ .drawer-toggle-label {
+    height: 100%;
+  }
+
+  .drawer-toggle:checked ~ .drawer-toggle-label,
+  .drawer-toggle:checked ~ header {
+    left: 300px;
+  }
+
+  .drawer-toggle:checked ~ .drawer {
+    left: 0px;
+  }
+
+  #page-content {
+    margin-left: 0px;
+  }
+  .drawer-open ~ #page-content {
+    margin-left: 300px;
+  }
+
+  .drawer-toggle:checked ~ .drawer-toggle-label {
+    height: 100%;
+    width: 50px;
+  }
+
+  .drawer-toggle:checked ~ .drawer-toggle-label,
+  .drawer-toggle:checked ~ header {
+    left: calc(100% - 50px);
+  }
+
+  .drawer-toggle:checked ~ .drawer {
+    width: calc(100% - 50px);
+    padding: 20px;
+  }
+
+  .drawer-toggle:checked ~ #page-content {
+    margin-left: calc(100% - 50px);
+  }
+
+}
