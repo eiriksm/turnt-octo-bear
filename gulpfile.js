@@ -1,3 +1,4 @@
+'use strict';
 var gulp = require('gulp');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
@@ -13,7 +14,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['static/**/*.js', '!static/out.js']  , ['scripts']);
+  gulp.watch(['static/**/*.js', '!static/out.js'], ['scripts']);
 });
 
 gulp.task('watch2', function() {
@@ -25,6 +26,7 @@ gulp.task('scss', function() {
     .pipe(sass({
       errLogToConsole: true,
       error: function(err) {
+        throw new Error(err);
       }
     }))
     .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))

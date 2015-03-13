@@ -1,6 +1,7 @@
-module.exports = function(data) {
+'use strict';
 
-  if (typeof(data) === 'string') {
+module.exports = function(data) {
+  if (typeof data === 'string') {
     // Support creating a message with only message as param.
     data = {
       text: data

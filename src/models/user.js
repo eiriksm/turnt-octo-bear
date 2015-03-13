@@ -1,3 +1,4 @@
+'use strict';
 var uuid = require('node-uuid');
 
 module.exports = function(name) {

@@ -1,5 +1,5 @@
+'use strict';
 var r = require('rethinkdb');
-var util = require('util');
 
 var codes = require('./errorcodes');
 var db = require('./db');
@@ -9,7 +9,7 @@ var User = require('./models/user');
 module.exports = handler;
 var p;
 
-function handler(spark, primus) {
+function handler(handlerSpark, primus) {
   var initClient = function(spark) {
     var name = 'Guest' + Math.floor(Math.random() * 999);
     var user = new User(name);
@@ -55,9 +55,9 @@ function handler(spark, primus) {
   // Open a rethinkDB connection per client.
   r.connect()
   .then(function(conn) {
-    spark.conn = conn;
+    handlerSpark.conn = conn;
     conn.use('turnt_bear');
-    initClient(spark);
+    initClient(handlerSpark);
   })
   .error(function(e) {
     // @todo.

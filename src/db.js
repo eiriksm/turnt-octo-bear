@@ -1,3 +1,5 @@
+'use strict';
+
 var r = require('rethinkdb');
 
 exports.saveMessage = saveMessage;
