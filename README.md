@@ -17,7 +17,9 @@ It means that if you want to send a "chat-message", the message will not show up
 So, an extremely persistent chat application.
 
 ## You keep saying "chat-messages" in quotes. Why is that?
-That is because you are not actually seeing text when you chat with someone. You are seeing a random svg representation of the message. So as it may seem like you are sending messages and they end up as random svgs, you are actually sending the same "random" svgs each time you send the same text.
+That is because you are not actually seeing text when you chat with someone. You are seeing a random svg representation of the message. So as it may seem like you are sending messages and they end up as random svgs, you are actually sending the same "random" svgs each time you send the same text. 
+
+Or to put it more correctly. Your message is used as the random seed in generating random "artworks".
 
 ## I see what that text says, but can you please show it in an animated gif?
 Sure
