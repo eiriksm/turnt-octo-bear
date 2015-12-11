@@ -35,7 +35,7 @@
     "browserify": "^9.0.3",
     "browserify-shim": "^3.8.3",
     "envify": "^3.3.1",
-    "eslint": "^0.16.2",
+    "eslint": "^1.10.3",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "2.1.0",
     "gulp-rename": "^1.2.0",
