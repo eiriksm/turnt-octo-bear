@@ -43,7 +43,7 @@
     "gulp-uglify": "^1.1.0",
     "istanbul": "^0.3.7",
     "mocha": "^2.2.1",
-    "msg2svg": "^1.1.0",
+    "msg2svg": "^2.0.0",
     "react": "^0.13.0",
     "reactify": "^1.1.0",
     "vinyl-source-stream": "^1.1.0"
