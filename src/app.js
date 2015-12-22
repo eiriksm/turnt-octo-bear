@@ -4,11 +4,12 @@ var Hapi = require('hapi');
 var Primus = require('primus');
 var Emitter = require('primus-emitter');
 var async = require('async');
+var Inert = require('inert');
 
 var primusHandler = require('./primusHandler');
 
 var server = new Hapi.Server();
-server.connection({port: 9000});
+server.connection({port: 9009});
 server.primus = new Primus(server.listener, {
   transformer: 'engine.io'
 });
@@ -20,7 +21,7 @@ server.primus.on('connection', function(spark) {
   // object as well.
   return primusHandler(spark, server.primus);
 });
-
+server.register(Inert, function () {});
 server.route({
   method: 'GET',
   path: '/',
