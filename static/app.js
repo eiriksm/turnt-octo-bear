@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 var Primus = require('primus');
 var React = require('react');
+var ReactDom = require('react-dom');
 
 var p = Primus.connect();
 
@@ -158,5 +159,5 @@ var ChatApp = React.createClass({
 });
 
 p.on('init', function(data) {
-  React.renderComponent(<ChatApp init={data} />, document.body);
+  ReactDom.render(<ChatApp init={data} />, document.getElementById('app-container'));
 });

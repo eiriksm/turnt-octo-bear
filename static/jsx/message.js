@@ -5,7 +5,7 @@ var msg2svg = require('msg2svg');
 var Message = React.createClass({
   render: function() {
     // Nooo. This looks like a hack.
-    var a = msg2svg(this.props.text, {width: 240, height: 100});
+    var a = msg2svg(document, this.props.text, {width: 240, height: 100});
 
     var tmp = document.createElement("div");
     tmp.appendChild(a[0][0]);
