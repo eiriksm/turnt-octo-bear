@@ -4,7 +4,7 @@ var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
 
 gulp.task('scripts', function() {
   browserify('./static/app.js')
@@ -29,7 +29,7 @@ gulp.task('scss', function() {
         throw new Error(err);
       }
     }))
-    .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
+    .pipe(prefix('last 1 version', '> 1%', 'ie 8', 'ie 7'))
     .pipe(rename('css.min.css'))
     //.pipe(source('css.min.css'))
     .pipe(gulp.dest('static/build'));
