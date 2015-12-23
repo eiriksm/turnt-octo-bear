@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint . && mocha",
-    "start": "node index"
+    "start": "node index",
+    "coverage": "istanbul cover -- _mocha"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "reactify": "^1.1.1",
+    "should": "^8.0.2",
     "vinyl-source-stream": "^1.1.0"
   },
   "browserify": {
