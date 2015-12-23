@@ -9,7 +9,7 @@ An extremely persistent chat application
 It is a real-time chat application that only shows messages after they are saved to the database.
 
 ## Why is that?
-Because I wanted to try [RethinkDB changefeeds](http://www.rethinkdb.com/api/javascript/#changes).
+Because I wanted to try [RethinkDB changefeeds](http://www.rethinkdb.com/api/javascript/#changes), and also [hapi](http://hapijs.com/) and [react](https://facebook.github.io/react/).
 
 ## What does it mean in practice?
 It means that if you want to send a "chat-message", the message will not show up simply because you clicked the send button. But rather because RethinkDB has said it is saved in the database. Same goes for the "chat-messages" you receive from others. They are not sent over websockets as they come in, they are sent over websockets when RethinkDB says they are saved in the database.
