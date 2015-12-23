@@ -145,6 +145,7 @@ function startServer(conn, dbName, callback) {
         re = re.reverse();
         server.primus.dbmessages = re;
       });
+      callback(e);
     });
     // Start listening for changes in messages table.
     r.table('messages').changes().run(conn, function(dbErr, cursor) {
@@ -167,7 +168,6 @@ function startServer(conn, dbName, callback) {
           server.primus.dbmessages.push(msg.new_val);
           server.primus.dbmessages.splice(0, 1);
         }
-        callback();
       });
     });
   });
