@@ -8,4 +8,4 @@ before_install:
   - tar xvzf data.tar.gz
 before_script:
   - ./usr/bin/rethinkdb --daemon
-	- sleep 10
+  - sleep 10
