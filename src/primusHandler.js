@@ -24,7 +24,7 @@ function handler(handlerSpark, primus) {
 
     spark.send('init', welcome);
     spark.on('message', function(msg) {
-      if (!name) {
+      if (!user.name) {
         spark.send('emittererror', codes.ERRORNONAME);
         return;
       }

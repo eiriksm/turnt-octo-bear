@@ -10,7 +10,7 @@ describe('App export', function() {
 
 describe('App functionality', function() {
   it('Should start when we tell it to', function(done) {
-    this.timeout(5000);
+    this.timeout(15000);
     app.init({}, function(e) {
       should(e).equal(null);
       done();

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "eslint . && mocha",
     "start": "node index",
-    "coverage": "istanbul cover -- _mocha"
+    "coverage": "istanbul cover -- _mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,7 @@
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
     "msg2svg": "^2.0.0",
+    "proxyquire": "^1.7.3",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "reactify": "^1.1.1",
