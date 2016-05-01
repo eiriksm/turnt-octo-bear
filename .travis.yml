@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "4"
+  - "6"
+  - "node"
 sudo: false
 before_install:
   - wget http://download.rethinkdb.com/apt/pool/precise/main/r/rethinkdb/rethinkdb_2.3.1~0precise_amd64.deb
