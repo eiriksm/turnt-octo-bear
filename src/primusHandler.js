@@ -53,7 +53,7 @@ function handler(handlerSpark, primus) {
     p = primus;
   }
   // Open a rethinkDB connection per client.
-  r.connect()
+  r.connect('localhost')
   .then(function(conn) {
     handlerSpark.conn = conn;
     conn.use('turnt_bear');
