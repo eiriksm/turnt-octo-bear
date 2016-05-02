@@ -4,7 +4,7 @@
   "description": "turnt-octo-bear",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && mocha",
+    "test": "gulp && gulp scss && eslint . && mocha --recursive",
     "start": "node index",
     "coverage": "istanbul cover -- _mocha --recursive"
   },
