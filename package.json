@@ -1,7 +1,7 @@
 {
   "name": "turnt-octo-bear",
   "version": "0.0.0",
-  "description": "turnt-octo-bear ===============",
+  "description": "turnt-octo-bear",
   "main": "index.js",
   "scripts": {
     "test": "eslint . && mocha",
