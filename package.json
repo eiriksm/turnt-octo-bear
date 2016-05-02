@@ -24,7 +24,7 @@
   "dependencies": {
     "async": "^1.5.2",
     "engine.io": "^1.6.5",
-    "good": "^6.4.0",
+    "good": "^7.0.0",
     "good-console": "^5.2.0",
     "hapi": "^13.0.0",
     "inert": "^3.2.0",
