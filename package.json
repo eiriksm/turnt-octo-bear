@@ -27,7 +27,7 @@
     "good": "^6.6.3",
     "good-console": "^5.3.2",
     "hapi": "^13.3.0",
-    "inert": "^3.2.0",
+    "inert": "^4.0.0",
     "node-uuid": "^1.4.7",
     "primus": "^5.2.0",
     "primus-emitter": "^3.1.1",
