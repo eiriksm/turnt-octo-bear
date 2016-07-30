@@ -29,7 +29,7 @@
     "hapi": "^13.3.0",
     "inert": "^4.0.0",
     "node-uuid": "^1.4.7",
-    "primus": "^5.2.0",
+    "primus": "^6.0.1",
     "primus-emitter": "^3.1.1",
     "rethinkdb": "~2.3.1"
   },
